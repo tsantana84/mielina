@@ -12,8 +12,11 @@
 <meta property="og:title" content="Mielina — Saúde Mental nas Organizações">
 <meta property="og:description" content="Fortalecemos as conexões que sustentam pessoas e organizações. Workshops, palestras e projetos de saúde mental baseados em evidências.">
 <meta property="og:url" content="https://mielinasaudemental.com.br">
+<meta property="og:image" content="https://mielinasaudemental.com.br/og.png">
+<meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke-width='7' stroke-linecap='round'><path d='M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64' stroke='%236f7550'/><path d='M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68' stroke='%231c2b4a'/><path d='M44 68 C 42 50 58 42 72 48' stroke='%23bd6237'/></g><circle cx='70' cy='60' r='6.5' fill='%23bd6237'/></svg>">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +73,8 @@
   h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;color:var(--navy)}
 
   a{color:inherit}
+  img{max-width:100%}
+  picture{display:contents}
 
   /* ---------- header ---------- */
   header{
@@ -80,7 +85,7 @@
   }
   .bar{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0}
   .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-  .brand .mark{width:38px;height:38px;flex:none}
+  .brand .mark{width:46px;height:auto;flex:none;display:block}
   .brand .name{font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;color:var(--olive);letter-spacing:.02em}
   nav{display:flex;align-items:center;gap:1.6rem}
   nav a{text-decoration:none;font-size:.9rem;letter-spacing:.04em;color:var(--ink-soft);transition:color .2s}
@@ -105,11 +110,11 @@
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden}
   .hero-watermark{
-    position:absolute;right:-14vw;top:50%;transform:translateY(-50%);
-    width:min(720px,80vw);opacity:.09;pointer-events:none;z-index:0;
-    color:var(--olive);
+    position:absolute;right:-12vw;top:50%;transform:translateY(-50%);
+    width:min(680px,78vw);opacity:.10;pointer-events:none;z-index:0;
   }
-  @media (prefers-color-scheme: dark){.hero-watermark{opacity:.13}}
+  .hero-watermark img{width:100%;height:auto;display:block}
+  @media (prefers-color-scheme: dark){.hero-watermark{opacity:.14}}
   .hero .wrap{position:relative;z-index:1}
   .eyebrow{
     display:inline-block;font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;
@@ -174,7 +179,7 @@
     box-shadow:0 30px 70px -45px rgba(0,0,0,.5);
   }
   @media (prefers-color-scheme: dark){.card-cta{background:var(--card);border:1px solid var(--line)}}
-  .card-cta .mark{width:64px;height:64px;margin:0 auto 1rem}
+  .card-cta .mark{width:80px;height:auto;margin:0 auto 1.1rem;display:block}
   .card-cta h3{color:#fff;font-size:2rem;margin-bottom:.5rem}
   @media (prefers-color-scheme: dark){.card-cta h3{color:var(--navy)}}
   .card-cta p{font-size:.96rem;font-weight:300;opacity:.9;margin-bottom:1.6rem;max-width:34ch;margin-inline:auto}
@@ -185,7 +190,7 @@
   @media (prefers-color-scheme: dark){footer{background:#0b0f18}}
   .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;align-items:flex-start}
   .foot-brand{display:flex;align-items:center;gap:.6rem}
-  .foot-brand .mark{width:34px;height:34px}
+  .foot-brand .mark{width:44px;height:auto;display:block}
   .foot-brand .name{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:#fff;font-weight:600}
   .legal{font-size:.82rem;line-height:1.9;color:#9aa6bb;max-width:46ch}
   .legal strong{color:#cfd6e2;font-weight:500}
@@ -193,42 +198,22 @@
   .foot-bottom a{color:#8492a8;text-decoration:none}
   .foot-bottom a:hover{color:#fff}
 
-  /* draw-in */
-  @keyframes draw{to{stroke-dashoffset:0}}
+  /* fade-in suave da logo */
+  @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:no-preference){
-    .mark path{stroke-dasharray:320;stroke-dashoffset:320;animation:draw 1.6s ease forwards}
-    .mark path:nth-child(2){animation-delay:.18s}
-    .mark path:nth-child(3){animation-delay:.36s}
-    .mark circle{opacity:0;animation:fadein .5s ease .8s forwards}
-    @keyframes fadein{to{opacity:1}}
+    .card-cta .mark{animation:fadein .7s ease both}
   }
 </style>
 </head>
 <body>
 
-<!-- SVG do símbolo (reutilizado) -->
-<template id="logo">
-  <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-    <g stroke-width="6.5" stroke-linecap="round">
-      <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
-      <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--navy)"/>
-      <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
-    </g>
-    <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
-  </svg>
-</template>
-
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Mielina — início">
-      <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <g stroke-width="6.5" stroke-linecap="round">
-          <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
-          <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--navy)"/>
-          <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
-        </g>
-        <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
-      </svg>
+      <picture>
+        <source srcset="logo-light.png" media="(prefers-color-scheme: dark)">
+        <img class="mark" src="logo.png" alt="Mielina" width="735" height="451">
+      </picture>
       <span class="name">mielina</span>
     </a>
     <nav>
@@ -247,14 +232,12 @@
 
 <a id="top"></a>
 <section class="hero">
-  <svg class="hero-watermark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-    <g stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
-      <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64"/>
-      <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68"/>
-      <path d="M44 68 C 42 50 58 42 72 48"/>
-    </g>
-    <circle cx="70" cy="60" r="5" fill="currentColor"/>
-  </svg>
+  <div class="hero-watermark" aria-hidden="true">
+    <picture>
+      <source srcset="logo-light.png" media="(prefers-color-scheme: dark)">
+      <img src="logo.png" alt="">
+    </picture>
+  </div>
   <div class="wrap">
     <span class="eyebrow">Saúde Mental nas Organizações</span>
     <h1>Fortalecemos as <em>conexões</em> que sustentam pessoas e organizações.</h1>
@@ -349,14 +332,7 @@
       </ul>
     </div>
     <div class="card-cta">
-      <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <g stroke-width="6.5" stroke-linecap="round">
-          <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
-          <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--navy)"/>
-          <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
-        </g>
-        <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
-      </svg>
+      <img class="mark" src="logo-light.png" alt="Mielina" width="735" height="451">
       <h3>Pronto para começar?</h3>
       <p>Fale com a Mielina e receba uma proposta pensada para o momento da sua organização.</p>
       <div class="actions">
@@ -371,14 +347,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-          <g stroke-width="6.5" stroke-linecap="round">
-            <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
-            <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--sage)"/>
-            <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
-          </g>
-          <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
-        </svg>
+        <img class="mark" src="logo-light.png" alt="Mielina" width="735" height="451">
         <span class="name">mielina</span>
       </div>
       <div class="legal">

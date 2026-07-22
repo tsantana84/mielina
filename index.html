@@ -3,262 +3,398 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mielina — Saúde Mental</title>
-<meta name="description" content="Mielina Saúde Mental — cuidado psicológico e psiquiátrico com acolhimento. Em breve.">
-<meta name="theme-color" content="#0f4c46">
+<title>Mielina — Saúde Mental nas Organizações</title>
+<meta name="description" content="Projeto Mielina: workshops, palestras e projetos de saúde mental para organizações. Conteúdo baseado em evidências, presencial e online. Rio de Janeiro.">
+<meta name="theme-color" content="#6f7550">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Mielina — Saúde Mental">
-<meta property="og:description" content="Cuidado em saúde mental com acolhimento e ciência. Site em breve.">
+<meta property="og:title" content="Mielina — Saúde Mental nas Organizações">
+<meta property="og:description" content="Fortalecemos as conexões que sustentam pessoas e organizações. Workshops, palestras e projetos de saúde mental baseados em evidências.">
 <meta property="og:url" content="https://mielinasaudemental.com.br">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='6' fill='%232f8f83'/><circle cx='6' cy='7' r='2.4' fill='%237cc6ba'/><circle cx='26' cy='9' r='2.4' fill='%237cc6ba'/><circle cx='7' cy='25' r='2.4' fill='%237cc6ba'/><circle cx='25' cy='24' r='2.4' fill='%237cc6ba'/><g stroke='%232f8f83' stroke-width='1.4' opacity='.6'><line x1='16' y1='16' x2='6' y2='7'/><line x1='16' y1='16' x2='26' y2='9'/><line x1='16' y1='16' x2='7' y2='25'/><line x1='16' y1='16' x2='25' y2='24'/></g></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke-width='7' stroke-linecap='round'><path d='M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64' stroke='%236f7550'/><path d='M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68' stroke='%231c2b4a'/><path d='M44 68 C 42 50 58 42 72 48' stroke='%23bd6237'/></g><circle cx='70' cy='60' r='6.5' fill='%23bd6237'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --bg-0:#f4f1ea;
-    --bg-1:#e9efec;
-    --ink:#17302c;
-    --ink-soft:#4a635d;
-    --brand:#0f4c46;
-    --brand-2:#2f8f83;
-    --accent:#c9a66b;
-    --line:rgba(15,76,70,.14);
-    --card:rgba(255,255,255,.55);
-    --card-brd:rgba(255,255,255,.7);
-    --net:#2f8f83;
+    --cream:#f5f0e6;
+    --cream-2:#efe7d7;
+    --olive:#6f7550;
+    --olive-deep:#565b3e;
+    --sage:#9aa47e;
+    --navy:#1c2b4a;
+    --navy-soft:#2c3d5f;
+    --terra:#bd6237;
+    --terra-deep:#a5502a;
+    --ink:#3a3b30;
+    --ink-soft:#5f6150;
+    --line:rgba(28,43,74,.14);
+    --card:#fbf8f1;
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg-0:#0b1a18;
-      --bg-1:#0f2622;
-      --ink:#eef4f1;
-      --ink-soft:#a7c1ba;
-      --brand:#7cc6ba;
-      --brand-2:#4fae9f;
-      --accent:#d9bd88;
-      --line:rgba(124,198,186,.16);
-      --card:rgba(18,42,38,.5);
-      --card-brd:rgba(124,198,186,.14);
-      --net:#4fae9f;
+      --cream:#11151f;
+      --cream-2:#161c2b;
+      --olive:#9aa47e;
+      --olive-deep:#7f8963;
+      --sage:#8b9670;
+      --navy:#e9e3d4;
+      --navy-soft:#cfc9ba;
+      --terra:#d1774a;
+      --terra-deep:#bd6237;
+      --ink:#e5e0d3;
+      --ink-soft:#b3ae9f;
+      --line:rgba(233,227,212,.14);
+      --card:#182031;
     }
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%}
+  html{scroll-behavior:smooth}
   body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     color:var(--ink);
-    background:
-      radial-gradient(1200px 700px at 15% -10%, var(--bg-1), transparent 60%),
-      radial-gradient(1000px 800px at 100% 110%, var(--bg-1), transparent 55%),
-      var(--bg-0);
-    min-height:100dvh;
-    display:grid;
-    place-items:center;
-    padding:clamp(1.25rem,4vw,3rem);
-    overflow:hidden;
+    background:var(--cream);
+    line-height:1.65;
+    font-weight:300;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
+  .wrap{width:min(1080px,92vw);margin-inline:auto}
+  section{padding:clamp(3.5rem,9vw,7rem) 0}
 
-  #net{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.5}
-  @media (prefers-reduced-motion: reduce){#net{opacity:.3}}
+  h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;color:var(--navy)}
 
-  main{
-    position:relative;z-index:1;
-    width:min(680px,100%);
-    text-align:center;
-    background:var(--card);
-    border:1px solid var(--card-brd);
-    border-radius:28px;
-    padding:clamp(2rem,6vw,3.75rem) clamp(1.5rem,5vw,3.25rem);
-    backdrop-filter:blur(14px) saturate(120%);
-    -webkit-backdrop-filter:blur(14px) saturate(120%);
-    box-shadow:0 30px 80px -40px rgba(0,0,0,.45);
-    animation:rise .9s cubic-bezier(.2,.7,.2,1) both;
+  a{color:inherit}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb,var(--cream) 88%,transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
   }
-  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+  .brand .mark{width:38px;height:38px;flex:none}
+  .brand .name{font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;color:var(--olive);letter-spacing:.02em}
+  nav{display:flex;align-items:center;gap:1.6rem}
+  nav a{text-decoration:none;font-size:.9rem;letter-spacing:.04em;color:var(--ink-soft);transition:color .2s}
+  nav a:hover{color:var(--terra)}
+  .nav-links{display:flex;gap:1.6rem}
+  @media (max-width:640px){.nav-links{display:none}}
 
-  .badge{
-    display:inline-flex;align-items:center;gap:.5rem;
-    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--brand-2);font-weight:600;
-    padding:.45rem .9rem;border:1px solid var(--line);border-radius:999px;
-    margin-bottom:1.75rem;
-  }
-  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--brand-2);
-    box-shadow:0 0 0 0 var(--brand-2);animation:pulse 2.4s ease-out infinite}
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--brand-2) 55%,transparent)}
-    70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}
-  }
-  @media (prefers-reduced-motion: reduce){.badge .dot{animation:none}}
-
-  .wordmark{
-    font-size:clamp(3rem,11vw,5.5rem);
-    font-weight:600;letter-spacing:-.03em;line-height:.95;
-    color:var(--brand);
-    font-family:Georgia,"Times New Roman",serif;
-  }
-  .wordmark b{color:var(--brand-2);font-weight:600}
-
-  .tagline{
-    margin-top:.5rem;
-    font-size:clamp(.85rem,2.6vw,1.05rem);
-    letter-spacing:.32em;text-transform:uppercase;
-    color:var(--ink-soft);font-weight:500;
-  }
-
-  .rule{width:56px;height:2px;background:var(--accent);border:0;border-radius:2px;
-    margin:1.9rem auto 1.6rem}
-
-  .lead{
-    font-size:clamp(1.05rem,3.2vw,1.3rem);
-    line-height:1.6;color:var(--ink);
-    max-width:44ch;margin:0 auto;
-  }
-  .sub{
-    margin-top:1rem;font-size:clamp(.95rem,2.6vw,1.02rem);
-    line-height:1.7;color:var(--ink-soft);max-width:50ch;margin-left:auto;margin-right:auto;
-  }
-
-  .cta{margin-top:2.25rem;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
   .btn{
     display:inline-flex;align-items:center;gap:.5rem;
-    text-decoration:none;font-weight:600;font-size:.98rem;
-    padding:.85rem 1.5rem;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease;
+    text-decoration:none;font-family:"Jost",sans-serif;font-weight:500;font-size:.92rem;letter-spacing:.02em;
+    padding:.7rem 1.35rem;border-radius:999px;transition:transform .18s ease,box-shadow .2s ease,background .2s ease;
+    white-space:nowrap;
   }
-  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 12px 28px -12px var(--brand)}
-  @media (prefers-color-scheme: dark){.btn-primary{color:#07201d}}
-  .btn-primary:hover{transform:translateY(-2px)}
-  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
-  .btn-ghost:hover{transform:translateY(-2px)}
+  .btn svg{width:17px;height:17px}
+  .btn-primary{background:var(--olive);color:#fff;box-shadow:0 10px 24px -12px var(--olive)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--olive-deep)}
+  .btn-terra{background:var(--terra);color:#fff;box-shadow:0 10px 24px -12px var(--terra)}
+  .btn-terra:hover{transform:translateY(-2px);background:var(--terra-deep)}
+  .btn-ghost{border:1px solid var(--line);color:var(--navy)}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:var(--olive)}
 
-  footer{
-    position:relative;z-index:1;
-    margin-top:1.75rem;font-size:.8rem;color:var(--ink-soft);
-    display:flex;flex-wrap:wrap;gap:.4rem .9rem;justify-content:center;align-items:center;
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden}
+  .hero-watermark{
+    position:absolute;right:-14vw;top:50%;transform:translateY(-50%);
+    width:min(720px,80vw);opacity:.09;pointer-events:none;z-index:0;
+    color:var(--olive);
   }
-  footer a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--line)}
-  footer .sep{opacity:.4}
+  @media (prefers-color-scheme: dark){.hero-watermark{opacity:.13}}
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-block;font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--terra);font-weight:500;margin-bottom:1.4rem;
+  }
+  .hero h1{font-size:clamp(2.5rem,6.5vw,4.6rem);max-width:16ch;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:var(--olive)}
+  .hero p.lead{
+    margin-top:1.6rem;max-width:52ch;font-size:clamp(1.05rem,2.4vw,1.22rem);color:var(--ink-soft);font-weight:300;
+  }
+  .hero .actions{margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:.85rem}
 
-  .wrap{display:flex;flex-direction:column;align-items:center}
+  /* ---------- serviços ---------- */
+  .band-olive{background:var(--olive);color:#f3efe4}
+  @media (prefers-color-scheme: dark){.band-olive{background:var(--cream-2)}}
+  .band-olive h2,.band-olive .kicker{color:#fff}
+  @media (prefers-color-scheme: dark){.band-olive h2{color:var(--navy)}}
+  .kicker{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--terra);margin-bottom:.9rem}
+  .band-olive .kicker{color:#e9c9b3}
+  h2.section-title{font-size:clamp(2rem,5vw,3.1rem);margin-bottom:.6rem}
+  .section-intro{max-width:56ch;font-size:1.05rem;font-weight:300;opacity:.9;margin-bottom:2.8rem}
+
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.1rem}
+  .svc{
+    border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:1.7rem 1.5rem;
+    background:rgba(255,255,255,.06);transition:transform .2s ease,background .2s ease;
+  }
+  @media (prefers-color-scheme: dark){.svc{border-color:var(--line);background:var(--card)}}
+  .svc:hover{transform:translateY(-4px);background:rgba(255,255,255,.12)}
+  @media (prefers-color-scheme: dark){.svc:hover{background:var(--cream-2)}}
+  .svc .num{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:#e9c9b3;font-weight:600;opacity:.9}
+  @media (prefers-color-scheme: dark){.svc .num{color:var(--terra)}}
+  .svc h3{font-size:1.5rem;margin:.5rem 0 .5rem;color:#fff}
+  @media (prefers-color-scheme: dark){.svc h3{color:var(--navy)}}
+  .svc p{font-size:.94rem;font-weight:300;opacity:.88;line-height:1.55}
+
+  /* ---------- diferenciais ---------- */
+  .feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2rem 2.4rem;margin-top:1rem}
+  .feat{border-top:2px solid var(--terra);padding-top:1.1rem}
+  .feat h3{font-size:1.55rem;margin-bottom:.4rem}
+  .feat p{font-size:.98rem;font-weight:300;color:var(--ink-soft)}
+
+  /* ---------- contato ---------- */
+  .contact{background:var(--cream-2)}
+  .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+  @media (max-width:760px){.contact-grid{grid-template-columns:1fr;gap:2rem}}
+  .contact h2{font-size:clamp(2rem,5vw,3.1rem)}
+  .contact .lead{margin:.8rem 0 2rem;max-width:40ch;color:var(--ink-soft);font-weight:300}
+  .clist{list-style:none;display:flex;flex-direction:column;gap:1.1rem}
+  .clist a,.clist li>span{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:var(--ink);font-size:1.02rem;transition:color .2s}
+  .clist a:hover{color:var(--terra)}
+  .clist .ic{
+    width:42px;height:42px;flex:none;border-radius:50%;display:grid;place-items:center;
+    background:var(--olive);color:#fff;
+  }
+  .clist .ic svg{width:19px;height:19px}
+  .clist .lbl{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:.05rem;font-weight:400}
+  .clist .val{font-weight:400}
+
+  .card-cta{
+    background:var(--olive);color:#f3efe4;border-radius:22px;padding:2.6rem 2.2rem;text-align:center;
+    box-shadow:0 30px 70px -45px rgba(0,0,0,.5);
+  }
+  @media (prefers-color-scheme: dark){.card-cta{background:var(--card);border:1px solid var(--line)}}
+  .card-cta .mark{width:64px;height:64px;margin:0 auto 1rem}
+  .card-cta h3{color:#fff;font-size:2rem;margin-bottom:.5rem}
+  @media (prefers-color-scheme: dark){.card-cta h3{color:var(--navy)}}
+  .card-cta p{font-size:.96rem;font-weight:300;opacity:.9;margin-bottom:1.6rem;max-width:34ch;margin-inline:auto}
+  .card-cta .actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy);color:#cfd6e2;padding:3rem 0 2.4rem}
+  @media (prefers-color-scheme: dark){footer{background:#0b0f18}}
+  .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;align-items:flex-start}
+  .foot-brand{display:flex;align-items:center;gap:.6rem}
+  .foot-brand .mark{width:34px;height:34px}
+  .foot-brand .name{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:#fff;font-weight:600}
+  .legal{font-size:.82rem;line-height:1.9;color:#9aa6bb;max-width:46ch}
+  .legal strong{color:#cfd6e2;font-weight:500}
+  .foot-bottom{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;color:#8492a8;display:flex;flex-wrap:wrap;gap:.5rem .9rem;justify-content:space-between}
+  .foot-bottom a{color:#8492a8;text-decoration:none}
+  .foot-bottom a:hover{color:#fff}
+
+  /* draw-in */
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media (prefers-reduced-motion:no-preference){
+    .mark path{stroke-dasharray:320;stroke-dashoffset:320;animation:draw 1.6s ease forwards}
+    .mark path:nth-child(2){animation-delay:.18s}
+    .mark path:nth-child(3){animation-delay:.36s}
+    .mark circle{opacity:0;animation:fadein .5s ease .8s forwards}
+    @keyframes fadein{to{opacity:1}}
+  }
 </style>
 </head>
 <body>
-  <canvas id="net" aria-hidden="true"></canvas>
 
-  <div class="wrap">
-    <main>
-      <span class="badge"><span class="dot"></span>Em breve</span>
+<!-- SVG do símbolo (reutilizado) -->
+<template id="logo">
+  <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+    <g stroke-width="6.5" stroke-linecap="round">
+      <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
+      <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--navy)"/>
+      <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
+    </g>
+    <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
+  </svg>
+</template>
 
-      <h1 class="wordmark">mie<b>lina</b></h1>
-      <p class="tagline">Saúde Mental</p>
-
-      <hr class="rule">
-
-      <p class="lead">Cuidado que conecta ciência e acolhimento.</p>
-      <p class="sub">
-        Assim como a mielina protege e acelera as conexões do cérebro, nosso trabalho
-        fortalece o caminho para o seu bem-estar. Um espaço de psicologia e psiquiatria
-        está sendo preparado com cuidado. Estamos quase lá.
-      </p>
-
-      <div class="cta">
-        <a class="btn btn-primary" href="mailto:contato@mielinasaudemental.com.br">
-          Fale conosco
-        </a>
-        <a class="btn btn-ghost" href="https://wa.me/00000000000" rel="noopener">
-          WhatsApp
-        </a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Mielina — início">
+      <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <g stroke-width="6.5" stroke-linecap="round">
+          <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
+          <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--navy)"/>
+          <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
+        </g>
+        <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
+      </svg>
+      <span class="name">mielina</span>
+    </a>
+    <nav>
+      <div class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
       </div>
-    </main>
-
-    <footer>
-      <span>© <span id="ano">2026</span> Mielina Saúde Mental</span>
-      <span class="sep">•</span>
-      <a href="mailto:contato@mielinasaudemental.com.br">contato@mielinasaudemental.com.br</a>
-      <span class="sep">•</span>
-      <span>Brasil</span>
-    </footer>
+      <a class="btn btn-terra" href="https://wa.me/5521972777628" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.7-1.4.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.9 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
   </div>
+</header>
 
-<script>
-  document.getElementById('ano').textContent = new Date().getFullYear();
+<a id="top"></a>
+<section class="hero">
+  <svg class="hero-watermark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+    <g stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+      <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64"/>
+      <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68"/>
+      <path d="M44 68 C 42 50 58 42 72 48"/>
+    </g>
+    <circle cx="70" cy="60" r="5" fill="currentColor"/>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">Saúde Mental nas Organizações</span>
+    <h1>Fortalecemos as <em>conexões</em> que sustentam pessoas e organizações.</h1>
+    <p class="lead">
+      Assim como a mielina fortalece a comunicação entre os neurônios, o Projeto Mielina
+      fortalece as relações humanas dentro das empresas. Workshops, palestras e projetos de
+      saúde mental baseados em evidências — presenciais e online.
+    </p>
+    <div class="actions">
+      <a class="btn btn-terra" href="https://wa.me/5521972777628" target="_blank" rel="noopener">Fale com a gente</a>
+      <a class="btn btn-ghost" href="#servicos">Ver o que fazemos</a>
+    </div>
+  </div>
+</section>
 
-  // Rede neural sutil — nós conectados que respiram devagar (metáfora da mielina).
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const canvas = document.getElementById('net');
-  const ctx = canvas.getContext('2d');
-  let w, h, nodes, raf, dpr;
+<section id="servicos" class="band-olive">
+  <div class="wrap">
+    <p class="kicker">O que fazemos</p>
+    <h2 class="section-title">Conteúdo que se vive, não só se ouve</h2>
+    <p class="section-intro">
+      Cada encontro é pensado para que as pessoas experimentem, sintam e pratiquem — porque
+      a saúde emocional se constrói com prática constante.
+    </p>
+    <div class="services">
+      <div class="svc">
+        <div class="num">01</div>
+        <h3>Workshops</h3>
+        <p>Vivenciais e práticos, com metodologias ativas e ferramentas aplicáveis à rotina de trabalho.</p>
+      </div>
+      <div class="svc">
+        <div class="num">02</div>
+        <h3>Palestras</h3>
+        <p>Conteúdo baseado em evidências, em linguagem simples, que mobiliza toda a organização.</p>
+      </div>
+      <div class="svc">
+        <div class="num">03</div>
+        <h3>Dinâmicas</h3>
+        <p>Atividades de escuta e experiência que fortalecem vínculos entre líderes e equipes.</p>
+      </div>
+      <div class="svc">
+        <div class="num">04</div>
+        <h3>Projetos personalizados</h3>
+        <p>Programas desenhados conforme o contexto, a cultura e as necessidades de cada empresa.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  function color(){
-    return getComputedStyle(document.documentElement).getPropertyValue('--net').trim() || '#2f8f83';
-  }
-  let NET = color();
+<section id="diferenciais">
+  <div class="wrap">
+    <p class="kicker">Nosso diferencial</p>
+    <h2 class="section-title">Ciência, escuta e vivência organizacional</h2>
+    <div class="feats">
+      <div class="feat">
+        <h3>Equipe multidisciplinar</h3>
+        <p>Mais de 30 anos de experiência combinada entre consultório clínico e ambiente corporativo.</p>
+      </div>
+      <div class="feat">
+        <h3>Formatos flexíveis</h3>
+        <p>Projetos presenciais ou online, adaptados à estrutura e ao momento de cada organização.</p>
+      </div>
+      <div class="feat">
+        <h3>Atendimento multilíngue</h3>
+        <p>Workshops, palestras e consultorias conduzidos em português, inglês e espanhol.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  function resize(){
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    w = canvas.width = innerWidth * dpr;
-    h = canvas.height = innerHeight * dpr;
-    canvas.style.width = innerWidth + 'px';
-    canvas.style.height = innerHeight + 'px';
-    const count = Math.min(70, Math.round((innerWidth * innerHeight) / 22000));
-    nodes = Array.from({length: count}, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      vx: (Math.random() - .5) * .18 * dpr,
-      vy: (Math.random() - .5) * .18 * dpr,
-      r: (Math.random() * 1.6 + 1.1) * dpr
-    }));
-  }
+<section id="contato" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="kicker">Contato</p>
+      <h2>Vamos conversar</h2>
+      <p class="lead">
+        Uma conversa de cerca de 15 minutos é suficiente para entendermos o contexto da sua
+        empresa e os objetivos da ação.
+      </p>
+      <ul class="clist">
+        <li><a href="https://wa.me/5521972777628" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.1s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.7-1.4.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.9 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></span>
+          <span><span class="lbl">WhatsApp</span><span class="val">+55 21 97277-7628</span></span>
+        </a></li>
+        <li><a href="mailto:mielinasaudemental@gmail.com">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span><span class="lbl">E-mail</span><span class="val">mielinasaudemental@gmail.com</span></span>
+        </a></li>
+        <li><span>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span><span class="lbl">Onde estamos</span><span class="val">Rio de Janeiro — RJ</span></span>
+        </span></li>
+      </ul>
+    </div>
+    <div class="card-cta">
+      <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <g stroke-width="6.5" stroke-linecap="round">
+          <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
+          <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--navy)"/>
+          <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
+        </g>
+        <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
+      </svg>
+      <h3>Pronto para começar?</h3>
+      <p>Fale com a Mielina e receba uma proposta pensada para o momento da sua organização.</p>
+      <div class="actions">
+        <a class="btn btn-terra" href="https://wa.me/5521972777628" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" style="border-color:rgba(255,255,255,.4);color:#fff" href="mailto:mielinasaudemental@gmail.com">Enviar e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  function draw(){
-    ctx.clearRect(0, 0, w, h);
-    const maxD = 150 * dpr;
-    for (let i = 0; i < nodes.length; i++){
-      const a = nodes[i];
-      a.x += a.vx; a.y += a.vy;
-      if (a.x < 0 || a.x > w) a.vx *= -1;
-      if (a.y < 0 || a.y > h) a.vy *= -1;
-      for (let j = i + 1; j < nodes.length; j++){
-        const b = nodes[j];
-        const dx = a.x - b.x, dy = a.y - b.y;
-        const d = Math.hypot(dx, dy);
-        if (d < maxD){
-          ctx.globalAlpha = (1 - d / maxD) * .5;
-          ctx.strokeStyle = NET;
-          ctx.lineWidth = 1 * dpr;
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.stroke();
-        }
-      }
-    }
-    ctx.globalAlpha = .85;
-    ctx.fillStyle = NET;
-    for (const n of nodes){
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    ctx.globalAlpha = 1;
-    if (!reduce) raf = requestAnimationFrame(draw);
-  }
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <g stroke-width="6.5" stroke-linecap="round">
+            <path d="M14 74 C 6 34 40 14 66 20 C 88 25 96 46 86 64" stroke="var(--olive)"/>
+            <path d="M28 72 C 24 44 46 30 68 36 C 84 41 88 56 80 68" stroke="var(--sage)"/>
+            <path d="M44 68 C 42 50 58 42 72 48" stroke="var(--terra)"/>
+          </g>
+          <circle cx="70" cy="60" r="6.5" fill="var(--terra)"/>
+        </svg>
+        <span class="name">mielina</span>
+      </div>
+      <div class="legal">
+        <strong>Carina Rodriguez Desenvolvimento Humano Ltda</strong><br>
+        CNPJ 66.616.535/0001-08<br>
+        Responsável técnica: Carina V. de O. Rodriguez — CRP 05/31.304<br>
+        Barra Olímpica, Rio de Janeiro — RJ
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="ano">2026</span> Projeto Mielina — Saúde Mental nas Organizações</span>
+      <a href="mailto:mielinasaudemental@gmail.com">mielinasaudemental@gmail.com</a>
+    </div>
+  </div>
+</footer>
 
-  function start(){
-    NET = color();
-    resize();
-    if (raf) cancelAnimationFrame(raf);
-    draw();
-  }
-
-  addEventListener('resize', start);
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { NET = color(); });
-  start();
-</script>
+<script>document.getElementById('ano').textContent=new Date().getFullYear();</script>
 </body>
 </html>

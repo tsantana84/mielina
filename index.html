@@ -157,6 +157,20 @@
   .feat h3{font-size:1.55rem;margin-bottom:.4rem}
   .feat p{font-size:.98rem;font-weight:300;color:var(--ink-soft)}
 
+  /* ---------- quem somos ---------- */
+  .team{background:var(--cream)}
+  .team-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4.2rem);align-items:center}
+  @media (max-width:820px){.team-grid{grid-template-columns:1fr;gap:2.4rem}}
+  .team-photo{position:relative}
+  .team-photo img{position:relative;z-index:1;width:100%;height:auto;border-radius:20px;display:block;box-shadow:0 32px 64px -38px rgba(0,0,0,.5)}
+  .team-photo::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);background:var(--sage);border-radius:20px;z-index:0}
+  @media (prefers-color-scheme: dark){.team-photo::before{background:var(--olive-deep);opacity:.55}}
+  .team .section-intro{margin-bottom:0}
+  .team-people{margin-top:1.9rem;display:flex;flex-direction:column;gap:1.15rem}
+  .person{padding-left:1.1rem;border-left:2px solid var(--terra)}
+  .person .pn{font-family:"Cormorant Garamond",serif;font-size:1.42rem;font-weight:600;color:var(--navy);line-height:1.1}
+  .person .pr{display:block;font-size:.92rem;font-weight:300;color:var(--ink-soft);margin-top:.15rem}
+
   /* ---------- contato ---------- */
   .contact{background:var(--cream-2)}
   .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
@@ -219,6 +233,7 @@
     <nav>
       <div class="nav-links">
         <a href="#servicos">Serviços</a>
+        <a href="#quem-somos">Quem somos</a>
         <a href="#diferenciais">Diferenciais</a>
         <a href="#contato">Contato</a>
       </div>
@@ -281,6 +296,36 @@
         <div class="num">04</div>
         <h3>Projetos personalizados</h3>
         <p>Programas desenhados conforme o contexto, a cultura e as necessidades de cada empresa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quem-somos" class="team">
+  <div class="wrap team-grid">
+    <div class="team-photo">
+      <img src="equipe.jpg" alt="As três profissionais do Projeto Mielina" width="1200" height="978" loading="lazy">
+    </div>
+    <div>
+      <p class="kicker">Quem somos</p>
+      <h2 class="section-title">Um time que une ciência, escuta e vivência</h2>
+      <p class="section-intro">
+        Reunimos experiência clínica, conhecimento científico e vivência organizacional para
+        fortalecer a saúde mental nas empresas — com acolhimento e base em evidências.
+      </p>
+      <div class="team-people">
+        <div class="person">
+          <span class="pn">Carina Rodriguez</span>
+          <span class="pr">Psicóloga (UERJ) · CRP 05/31.304 — mais de 20 anos em clínica e gestão de pessoas.</span>
+        </div>
+        <div class="person">
+          <span class="pn">Alexandra Figueiredo</span>
+          <span class="pr">Farmacêutica · saúde integrativa, comunicação não-violenta e promoção da saúde.</span>
+        </div>
+        <div class="person">
+          <span class="pn">Ana Livia Santana</span>
+          <span class="pr">Psicologia e marketing · foco em cultura e relações nas organizações.</span>
+        </div>
       </div>
     </div>
   </div>
